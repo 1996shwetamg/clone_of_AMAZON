@@ -1,0 +1,51 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#right{
+    width: 80%;
+    border: 2px solid red;
+    height: 9000px;
+    
+}
+#left{
+    width: 20%;
+    border: 2px solid red;
+    
+}
+.main{
+    display: flex;
+}
+.div1{
+    display: flex;
+    margin: 5%;
+}
+.div1>div{
+    width: 130px;
+    text-align: center;
+}
+
+.div1>div>img{
+    width: 100%;
+}
+.div2{
+    text-align: center;
+}
+.inerdiv3{
+    width: 140px;
+}
+.inerdiv3>img{
+    width: 100%;
+}
+/* #div3 {
+    max-width: 1200px;
+} */
+#div3 .inerdiv3{
+    white-space: nowrap;
+}
+.inerdiv3 img{
+    height: 100px;
+    width: calc(100% /1);
+}
+
