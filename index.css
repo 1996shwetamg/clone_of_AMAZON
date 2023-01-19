@@ -207,7 +207,10 @@ align-items: center;
 }
 .second span{
     font-size:15px;
-
+}
+.second a{
+    color:white;
+    text-decoration:none;
 }
 .second-1 div i{
     font-size: 20px;

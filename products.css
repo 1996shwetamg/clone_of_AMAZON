@@ -1,0 +1,93 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#container{
+    height: auto;
+    width: 100%;
+    border: 1px solid red;
+}
+#container_bottom{
+    height: 65px;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+}
+#container_bottom>div{
+    text-align: center;
+}
+#container_bottom h2{
+ 
+   color:#7998c7
+}
+#container_bottom *{
+    text-decoration: none;
+    color: black;
+
+}
+#container_bottom a:hover{
+     text-decoration: underline;
+     text-decoration-color: orange;
+     font-weight: bolder;
+}
+#left_div{
+    height: auto;
+    width: 20%;
+    border: 1px solid red;
+}
+#right_div{
+    height: auto;
+    width: 80%;
+    border: 1px solid pink;
+}
+#pro_page{
+    display: flex;
+}
+#right_div_1{
+    height: 130px;
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+#right_div_1 div{
+    height: 100%;
+    width:23%;
+    border: 1px solid black;
+}
+#left_div div{
+    text-align: center;
+    height: auto;
+    margin-top: 8px;
+}
+#left_div button{
+    border: none;
+    background-color: white;
+}
+#left_div>div{
+    margin-top: 15px;
+}
+#product_div{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+}
+#product_div div{
+    height: auto;
+    width: 100%;
+    border: 1px solid red;
+    margin-top: 5px;
+}
+#product_div div *{
+    text-align: center;
+}
+#product_div div button{
+    padding: 3px;
+    background-color: pink;
+    color: black;
+}
