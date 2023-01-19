@@ -1,8 +1,8 @@
 
 const swiper = new Swiper('.swiper', {
     autoplay:{
-       delay:3000,
-       disableOnInteraction:false,
+    delay:3000,
+    disableOnInteraction:false,
     },
     loop: true,
 
@@ -15,7 +15,7 @@ const swiper = new Swiper('.swiper', {
     
 });
 
-console.log("hi");
+
 let leftbtn=document.querySelector(".l-btn");
 let rightbtn=document.querySelector(".r-btn");
 leftbtn.addEventListener("click",(event)=>{
