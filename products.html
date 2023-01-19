@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product page</title>
-    <link rel="stylesheet" href="products.css">
-    
+    <link rel="stylesheet" href="products.css">      
 </head>
 <body>
     <div id="container">
@@ -14,67 +13,76 @@
 
         </nav>
         <div id="container_bottom">
-             <a href=""><h2>Fly Buy</h2></a>
-             <a href=""><p>Women</p></a>
-             <a href=""><p>Men</p></a>
-             <a href=""><p>Kids</p></a>
-             <a href=""><p>Shoes</p></a>
-             <a href=""><p>Sales & Deals</p></a>
-             <div>
-               <a href=""><h2>30 DAY RETURNS</h2></a>
-               <a href=""><p>Restrictions Apply</p></a>
-             </div>
+            <a href=""><h2>Fly Buy</h2></a>
+            <a href=""><p>Women's</p></a>
+            <a href=""><p>Men's</p></a>
+            <a href=""><p>Kids</p></a>
+            <a href=""><p>Shoes</p></a>
+            <a href=""><p>Sales & Deals</p></a>
+            <div>
+            <a href=""><h2>30 DAY RETURNS</h2></a>
+            <a href=""><p>Restrictions Apply</p></a>
+            </div>
         </div>
         <div id="pro_page">
             <div id="left_div">
-               <div id="fashion">
-                <h3>Fashion</h3>
+            <div id="fashion">
+                <h3 class="color">Fashion</h3>
                 <div>
-                    <button>Men's</button>
+
+                    <button class="focas" id="allcloths">All Clothes Products</button>
                 </div>
                 <div>
-                    <button>Women's</button>
+                    <button class="focas" id="mans">Men's</button>
+
                 </div>
                 <div>
-                    <button>Kid's</button>
+                    <button class="focas" id="womans">Women's</button>
                 </div>
                 <div>
-                    <button>Shoes</button>
+
+                    <button class="focas" id="kids">Kid's</button>
                 </div>
                 <div>
-                    <button>Accessories</button>
+                    <button class="focas" id="shoes">Shoes</button>
                 </div>
-               
-               
-               </div>
-               <div id="price">
-                <h3>Price</h3>
                 <div>
-                    <button>Under Rs 1,000</button>
+                    <button class="focas" id="acc">Accessories</button>
+                </div>
+                <div>
+                    <button class="focas" id="watches">Watches</button>
+
+                </div>
+            
+            </div>
+            <div id="price">
+                <h3 class="color">Price</h3>
+                <div>
+                    <button class="focas" id="thousands">Under Rs 1,000</button>
                 </div>
                 
                 <div>
-                    <button>Rs 1,000- Rs 5,000</button>
+                    <button class="focas" id="thousandstofive">Rs 1,000- Rs 5,000</button>
                 </div>
                 <div>
-                    <button>Rs 5,000- Rs 10,000</button>
+                    <button class="focas" id="fivetoten">Rs 5,000- Rs 10,000</button>
                 </div>
                 <div>
-                    <button>Rs 10,000- Rs 20,000</button>
+                    <button class="focas" id="tentotwenty">Rs 10,000- Rs 20,000</button>
                 </div>
                 <div>
-                    <button>Over Rs 20000</button>
+                    <button class="focas" id="abovetwenty">Over Rs 20000</button>
                 </div>
-               </div>
-               <div>
-                <h3>Filter</h3>
+            </div>
+            <div id="filt">
+                <h3 class="color">Filter</h3>
                 <div>
-                    <button>Low To High</button>
+                    <button class="focas" id="l_to_high">Low To High</button>
                 </div>
                 <div>
-                    <button>High To Low</button>
+                    <button class="focas" id="h_to_low">High To Low</button>
                 </div>
-               </div>
+            </div>
             </div>
             <div  id="right_div">
                 <div id="right_div_1">
@@ -100,43 +108,11 @@
                     </div>
                 </div>
                 <div id="product_div">
-                  
+                
                 </div>
             </div>
         </div>
     </div>
-  
 </body>
 </html>
-<script>
-
-    function display(){
-        fetch("https://6398b72e29930e2bb3bff0a7.mockapi.io/ClothesProd")
-        .then((res)=>{
-            return res.json()
-        }).then((data)=>{
-            console.log(data)
-            let arr=[]
-            for(let item of data){
-                let ans=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
-              arr.push(ans)
-            }
-            document.getElementById("product_div").innerHTML=arr.join(" ")
-        })
-    }
-    display()
-    function fetchdata(img,title,des,price,cate){
-        let obj=`
-        <div>
-            <img width="90%"  src=${img} alt="">
-            <h3>${title}</h3>
-            <p>${des}</p>
-            <h3>${price}</h3>
-            <div>
-             <button>Buy</button>
-             </div>
-        </div>
-        `
-        return obj
-    }
-</script>
+<script src="products.js"></script>
