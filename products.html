@@ -14,12 +14,12 @@
         #container{
             height: auto;
             width: 100%;
-            border: 1px solid red;
+            border: 1px solid white;
         }
         #container_bottom{
             height: 65px;
             width: 100%;
-            border: 1px solid black;
+            border: 1px solid white;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -45,12 +45,13 @@
         #left_div{
             height: auto;
             width: 20%;
-            border: 1px solid red;
+            border: 1px solid white;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         }
         #right_div{
             height: auto;
             width: 80%;
-            border: 1px solid pink;
+            border: 1px solid white;
         }
         #pro_page{
             display: flex;
@@ -58,15 +59,16 @@
         #right_div_1{
             height: 130px;
             width: 100%;
-            border: 1px solid red;
+            border: 1px solid white;
             display: flex;
             justify-content: space-around;
             text-align: center;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         }
         #right_div_1 div{
             height: 100%;
             width:23%;
-            border: 1px solid black;
+            border: 1px solid white;
         }
         #left_div div{
             text-align: center;
@@ -89,7 +91,7 @@
         #product_div div{
             height: auto;
             width: 100%;
-            border: 1px solid red;
+            border: 1px solid white;
             margin-top: 5px;
         }
         #product_div div *{
@@ -97,8 +99,29 @@
         }
         #product_div div button{
             padding: 3px;
-            background-color: pink;
-            color: black;
+            background-color: blue;
+            color: white;
+            width: 50px;
+            border: none;
+        }
+        .color{
+            color: red;
+        }
+        .divnew{
+            text-align: center;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            
+        }
+        .focas:hover{
+           font-weight: bolder;
+           text-decoration: underline;
+           text-decoration-color: red;
+        }
+        
+        #product_div div button:hover{
+            background-color: red;
+            font-weight: bolder;
+            border-radius: 3px;
         }
     </style>
 </head>
@@ -109,10 +132,10 @@
         </nav>
         <div id="container_bottom">
              <a href=""><h2>Fly Buy</h2></a>
-             <a href=""><p>Woman</p></a>
-             <a href=""><p>Man</p></a>
+             <a href=""><p>Woman's</p></a>
+             <a href=""><p>Man's</p></a>
              <a href=""><p>Kids</p></a>
-             <a href=""><p>Shows</p></a>
+             <a href=""><p>Shoes</p></a>
              <a href=""><p>Sales & Deals</p></a>
              <div>
                <a href=""><h2>30 DAY RETURNS</h2></a>
@@ -122,51 +145,56 @@
         <div id="pro_page">
             <div id="left_div">
                <div id="fashion">
-                <h3>Fashion</h3>
+                <h3 class="color">Fashion</h3>
                 <div>
-                    <button>Man's</button>
+                    <button class="focas" id="allcloths">All Cloths Products</button>
                 </div>
                 <div>
-                    <button>Woman's</button>
+                    <button class="focas" id="mans">Man's</button>
                 </div>
                 <div>
-                    <button>Kid's</button>
+                    <button class="focas" id="womans">Woman's</button>
                 </div>
                 <div>
-                    <button>Shows</button>
+                    <button class="focas" id="kids">Kid's</button>
                 </div>
                 <div>
-                    <button>Accessory</button>
+                    <button class="focas" id="shoes">Shoes</button>
                 </div>
-               
+                <div>
+                    <button class="focas" id="acc">Accessories</button>
+                </div>
+                <div>
+                    <button class="focas" id="watches">Watches</button>
+                </div>
                
                </div>
                <div id="price">
-                <h3>Price</h3>
+                <h3 class="color">Price</h3>
                 <div>
-                    <button>Under Rs 1,000</button>
+                    <button class="focas" id="thousands">Under Rs 1,000</button>
                 </div>
                 
                 <div>
-                    <button>Rs 1,000- Rs 5,000</button>
+                    <button class="focas" id="thousandstofive">Rs 1,000- Rs 5,000</button>
                 </div>
                 <div>
-                    <button>Rs 5,000- Rs 10,000</button>
+                    <button class="focas" id="fivetoten">Rs 5,000- Rs 10,000</button>
                 </div>
                 <div>
-                    <button>Rs 10,000- Rs 20,000</button>
+                    <button class="focas" id="tentotwenty">Rs 10,000- Rs 20,000</button>
                 </div>
                 <div>
-                    <button>Over Rs 20000</button>
+                    <button class="focas" id="abovetwenty">Over Rs 20000</button>
                 </div>
                </div>
                <div>
-                <h3>Filter</h3>
+                <h3 class="color">Filter</h3>
                 <div>
-                    <button>Low To High</button>
+                    <button class="focas" id="l_to_high">Low To High</button>
                 </div>
                 <div>
-                    <button>High To Low</button>
+                    <button class="focas" id="h_to_low">High To Low</button>
                 </div>
                </div>
             </div>
@@ -203,13 +231,23 @@
 </body>
 </html>
 <script>
-
+    window.addEventListener("load",()=>{
+        display()
+    })
+   let shoes=document.getElementById("shoes")
+   let acc=document.getElementById("acc")
+   let mans=document.getElementById("mans")
+   let womans=document.getElementById("womans")
+   let kids=document.getElementById("kids")
+   let allcloths=document.getElementById("allcloths")
+   let l_to_high=document.getElementById("l_to_high")
+   let thousands=document.getElementById("thousands")
     function display(){
         fetch("https://6398b72e29930e2bb3bff0a7.mockapi.io/ClothesProd")
         .then((res)=>{
             return res.json()
         }).then((data)=>{
-            console.log(data)
+            //console.log(data)
             let arr=[]
             for(let item of data){
                 let ans=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
@@ -218,19 +256,323 @@
             document.getElementById("product_div").innerHTML=arr.join(" ")
         })
     }
-    display()
+   
     function fetchdata(img,title,des,price,cate){
         let obj=`
-        <div>
-            <img width="90%"  src=${img} alt="">
-            <h3>${title}</h3>
+        <div class="divnew">
+            <img width="45%"  src=${img} alt="">
+            <h3 class="color">${title}</h3>
             <p>${des}</p>
-            <h3>${price}</h3>
+            <h3 class="color">Rs.${price}</h3>
             <div>
-             <button>Buy</button>
+             <button class="hover">Buy</button>
              </div>
         </div>
         `
         return obj
+    }
+    shoes.addEventListener("click",shoesfun)
+    function shoesfun(){
+       // document.getElementById("product_div").innerHTML="";
+        fetch("https://6399861629930e2bb3d5abc9.mockapi.io/ShoesProd")
+        .then((res)=>{
+            return res.json()
+        }).then((data)=>{
+            //console.log(data)
+            let arr2=[]
+            data.forEach(item => {
+                let newans=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+                 arr2.push(newans)
+            });
+            document.getElementById("product_div").innerHTML=arr2.join(" ")
+        })
+    }
+    
+    acc.addEventListener("click",accfun)
+    function accfun(){
+       // document.getElementById("product_div").innerHTML="";
+        fetch("https://639c1fe142e3ad692727c7a2.mockapi.io/Accesso")
+        .then((res)=>{
+            return res.json()
+        }).then((data)=>{
+            //console.log(data)
+            let arr3=[]
+            data.forEach(item => {
+                let newans1=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+                 arr3.push(newans1)
+            });
+            document.getElementById("product_div").innerHTML=arr3.join(" ")
+        })
+    }
+    mans.addEventListener("click",mansfun)
+    function mansfun(){
+        document.getElementById("product_div").innerHTML="";
+        fetch("https://6398b72e29930e2bb3bff0a7.mockapi.io/ClothesProd")
+        .then((res)=>{
+            return res.json()
+        }).then((data)=>{
+            console.log(data)
+            let ans4=data.filter((val,index)=>{
+                
+                  if(val.Category=="Mens"){
+                   
+                    return val
+                  }
+            })
+            console.log(ans4)
+            let finalres=[]
+            ans4.forEach(item => {
+                let newans6=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+                finalres.push(newans6)
+            });
+           document.getElementById("product_div").innerHTML=finalres.join(" ")
+        })
+    }
+    womans.addEventListener("click",womansfun)
+    function womansfun(){
+        document.getElementById("product_div").innerHTML="";
+        fetch("https://6398b72e29930e2bb3bff0a7.mockapi.io/ClothesProd")
+        .then((res)=>{
+            return res.json()
+        }).then((data)=>{
+            console.log(data)
+            let ans4=data.filter((val,index)=>{
+                
+                  if(val.Category=="Womens"){
+                   
+                    return val
+                  }
+            })
+            console.log(ans4)
+            let finalres=[]
+            ans4.forEach(item => {
+                let newans6=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+                finalres.push(newans6)
+            });
+           document.getElementById("product_div").innerHTML=finalres.join(" ")
+        })
+    }
+    kids.addEventListener("click",kidssfun)
+    function kidssfun(){
+        document.getElementById("product_div").innerHTML="";
+        fetch("https://6398b72e29930e2bb3bff0a7.mockapi.io/ClothesProd")
+        .then((res)=>{
+            return res.json()
+        }).then((data)=>{
+            console.log(data)
+            let ans4=data.filter((val,index)=>{
+                
+                  if(val.Category=="Kids"){
+                   
+                    return val
+                  }
+            })
+            console.log(ans4)
+            let finalres=[]
+            ans4.forEach(item => {
+                let newans6=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+                finalres.push(newans6)
+            });
+           document.getElementById("product_div").innerHTML=finalres.join(" ")
+        })
+    }
+    allcloths.addEventListener("click",allclothssfun)
+    function allclothssfun(){
+        document.getElementById("product_div").innerHTML="";
+        fetch("https://6398b72e29930e2bb3bff0a7.mockapi.io/ClothesProd")
+        .then((res)=>{
+            return res.json()
+        }).then((data)=>{
+            //console.log(data)
+            let arr=[]
+            for(let item of data){
+                let ans=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+              arr.push(ans)
+            }
+            document.getElementById("product_div").innerHTML=arr.join(" ")
+        })
+    }
+    l_to_high.addEventListener("click",assending)
+    function assending(){
+        fetch("https://6398b72e29930e2bb3bff0a7.mockapi.io/ClothesProd")
+        .then((res)=>{
+            return res.json()
+        }).then((data)=>{
+           // console.log(data)
+            let ans3=data.sort((a,b)=>{
+                return a.Price-b.Price
+
+            })
+            //console.log(ans3)
+            let arr=[]
+            for(let item of ans3){
+                let ans=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+              arr.push(ans)
+            }
+            document.getElementById("product_div").innerHTML=arr.join(" ")
+        })
+    }
+    h_to_low.addEventListener("click",desending)
+    function desending(){
+        fetch("https://6398b72e29930e2bb3bff0a7.mockapi.io/ClothesProd")
+        .then((res)=>{
+            return res.json()
+        }).then((data)=>{
+           // console.log(data)
+            let ans3=data.sort((a,b)=>{
+                return b.Price-a.Price
+
+            })
+            //console.log(ans3)
+            let arr=[]
+            for(let item of ans3){
+                let ans=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+              arr.push(ans)
+            }
+            document.getElementById("product_div").innerHTML=arr.join(" ")
+        })
+    }
+    thousands.addEventListener("click",under1000)
+    function under1000(){
+        fetch("https://6398b72e29930e2bb3bff0a7.mockapi.io/ClothesProd")
+        .then((res)=>{
+            return res.json()
+        }).then((data)=>{
+            let ans=data.filter((val,index)=>{
+                if(val.Price<=1000){
+                    return val
+                }
+            })
+            console.log(ans)
+            let finalres=[]
+            ans.forEach(item => {
+                let newans6=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+                finalres.push(newans6)
+            });
+           document.getElementById("product_div").innerHTML=finalres.join(" ")
+        })
+    }
+   
+    let thousandstofive1=document.getElementById("thousandstofive")
+    thousandstofive1.addEventListener("click",thousandstofive2)
+    function thousandstofive2(){
+        fetch("https://6398b72e29930e2bb3bff0a7.mockapi.io/ClothesProd")
+        .then((res)=>{
+            return res.json()
+        }).then((data)=>{
+            let ans=data.filter((val,index)=>{
+                if(val.Price>1000 && val.Price<=5000){
+                    return val
+                }
+            })
+            let sortdata=ans.sort((a,b)=>{
+                  return a.Price-b.Price
+            })
+           // console.log(ans)
+            let finalres=[]
+            sortdata.forEach(item => {
+                let newans6=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+                finalres.push(newans6)
+            });
+           document.getElementById("product_div").innerHTML=finalres.join(" ")
+        })
+    }
+    let fivetoten=document.getElementById("fivetoten")
+    fivetoten.addEventListener("click",fivetoten2)
+    function fivetoten2(){
+        fetch("https://6398b72e29930e2bb3bff0a7.mockapi.io/ClothesProd")
+        .then((res)=>{
+            return res.json()
+        }).then((data)=>{
+            let ans=data.filter((val,index)=>{
+                if(val.Price>5000 && val.Price<=10000){
+                    return val
+                }
+            })
+            let sortdata=ans.sort((a,b)=>{
+                  return a.Price-b.Price
+            })
+           // console.log(ans)
+            let finalres=[]
+            sortdata.forEach(item => {
+                let newans6=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+                finalres.push(newans6)
+            });
+           document.getElementById("product_div").innerHTML=finalres.join(" ")
+        })
+    }
+    let tentotwenty=document.getElementById("tentotwenty")
+    tentotwenty.addEventListener("click",tentotwenty2)
+    function tentotwenty2(){
+        fetch("https://6398b72e29930e2bb3bff0a7.mockapi.io/ClothesProd")
+        .then((res)=>{
+            return res.json()
+        }).then((data)=>{
+            let ans=data.filter((val,index)=>{
+                if(val.Price>10000 && val.Price<=20000){
+                    return val
+                }
+            })
+            let sortdata=ans.sort((a,b)=>{
+                  return a.Price-b.Price
+            })
+           // console.log(ans)
+            let finalres=[]
+            sortdata.forEach(item => {
+                let newans6=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+                finalres.push(newans6)
+            });
+           document.getElementById("product_div").innerHTML=finalres.join(" ")
+        })
+    }
+    let abovetwenty=document.getElementById("abovetwenty")
+    abovetwenty.addEventListener("click",abovetwenty2)
+    function abovetwenty2(){
+        fetch("https://6398b72e29930e2bb3bff0a7.mockapi.io/ClothesProd")
+        .then((res)=>{
+            return res.json()
+        }).then((data)=>{
+            let ans=data.filter((val,index)=>{
+                if( val.Price>20000){
+                    return val
+                }
+            })
+            let sortdata=ans.sort((a,b)=>{
+                  return a.Price-b.Price
+            })
+           // console.log(ans)
+            let finalres=[]
+            sortdata.forEach(item => {
+                let newans6=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+                finalres.push(newans6)
+            });
+           document.getElementById("product_div").innerHTML=finalres.join(" ")
+        })
+    }
+    let watches1=document.getElementById("watches")
+    watches1.addEventListener("click",watchfun1)
+    function watchfun1(){
+       // document.getElementById("product_div").innerHTML="";
+        fetch("https://639c1fe142e3ad692727c7a2.mockapi.io/Accesso")
+        .then((res)=>{
+            return res.json()
+        }).then((data)=>{
+            console.log(data)
+            let ans=data.filter((val,index)=>{
+                if(val.Category=="Watches"){
+                    return val
+                }
+            })
+            let sortdata=ans.sort((a,b)=>{
+                  return a.Price-b.Price
+            })
+           // console.log(ans)
+            let finalres=[]
+            sortdata.forEach(item => {
+                let newans6=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+                finalres.push(newans6)
+            });
+           document.getElementById("product_div").innerHTML=finalres.join(" ")
+        })
     }
 </script>
