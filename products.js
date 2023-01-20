@@ -29,7 +29,7 @@ function fetchdata(img,title,des,price,cate){
     <div class="divnew">
         <img width="90%"  src=${img} alt="">
         <h3 class="color">${title}</h3>
-        <p>${des}</p>
+        <p id="description">${des}</p>
         <h3 class="color">Rs.${price}</h3>
         <div>
         <button class="hover">Buy</button>
@@ -342,3 +342,13 @@ function watchfun1(){
     document.getElementById("product_div").innerHTML=finalres.join(" ")
     })
 }
+
+//backtop
+
+let backtop=document.querySelector(".backtop");
+backtop.addEventListener("click",()=>{
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+})
