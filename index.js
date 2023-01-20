@@ -86,6 +86,7 @@ sidebtn.addEventListener("click",()=>{
 sidebar.classList.add("active");
 xmark.classList.add("active");
 black.classList.add("active");
+document.body.classList.add("stop-scroll");
 })
 
 xmark.addEventListener("click",()=>{
@@ -93,3 +94,16 @@ xmark.addEventListener("click",()=>{
     xmark.classList.remove("active");
     black.classList.remove("active");
     })
+
+    //sign in&lists
+
+  let sign=document.querySelector(".ac");
+  let triangle=document.querySelector(".triangle");
+  let signin=document.querySelector(".hidden-sign");
+
+  sign.addEventListener("click",()=>{
+    console.log("ok")
+    black.classList.toggle("active-1");
+    signin.classList.toggle("active");
+    triangle.classList.toggle("active");
+  })
