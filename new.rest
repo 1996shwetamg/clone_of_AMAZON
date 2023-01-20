@@ -1,0 +1,1 @@
+GET https://6398b72e29930e2bb3bff0a7.mockapi.io/ClothesProd

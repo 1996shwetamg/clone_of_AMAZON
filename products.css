@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#container{
+    height: auto;
+    width: 100%;
+    border: 1px solid white;
+}
+#container_bottom{
+    background-color:black;
+    height: 65px;
+    width: 100%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#container_bottom p{
+    color: white;
+}
+#container_bottom>div{
+    text-align: center;
+}
+#container_bottom h2{
+color:#7998c7
+}
+#container_bottom *{
+    text-decoration: none;
+    color: black;
+}
+#container_bottom a:hover{
+    text-decoration: underline;
+    text-decoration-color: orange;
+    font-weight: bolder;
+}
+#left_div{
+    height: auto;
+    width: 20%;
+    border: 1px solid rgb(198, 193, 193);
+    margin-right: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#right_div{
+    height: auto;
+    width: 80%;
+    border: 1px solid white;
+}
+#pro_page{
+    display: flex;
+}
+#right_div_1{
+    height: 160px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+#right_div_1 div{
+    padding-top: 10px;
+    height: 100%;
+    width:23%;
+    border: 1px solid white;
+}
+#left_div div{
+    text-align: center;
+    height: auto;
+    margin-top: 8px;
+}
+#left_div button{
+    border: none;
+    background-color: white;
+}
+#left_div>div{
+
+    margin-top: 15px;
+}
+#product_div{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 7px;
+    margin:auto;
+}
+#product_div div{
+    height: auto;
+    width: 90%;
+    border: 1px solid white;
+    margin-top: 5px;
+
+}
+#product_div div *{
+    text-align: center;
+    border: 1px solid transparent;
+}
+#product_div div button{
+    padding: 3px;
+    background-color: rgb(20, 135, 196);
+    color: white;
+    width: 50px;
+    border: none;
+}
+.color{
+    color: rgb(183, 40, 40);
+}
+#fashion div,#price div,#filt div{
+    margin-bottom: 20px;
+}
+.divnew{
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.divnew h3 p{
+    font-family: 'Courier New', Courier, monospace;
+}
+.focas:hover{
+font-weight: bolder;
+text-decoration: underline;
+text-decoration-color: rgb(255, 149, 0);
+}
+
+#product_div div button:hover{
+    background-color: rgb(255, 162, 0);
+    font-weight: bolder;
+    border-radius: 3px;
+}
