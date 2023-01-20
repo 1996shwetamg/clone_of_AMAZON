@@ -35,6 +35,10 @@ color:#7998c7
     text-decoration-color: orange;
     font-weight: bolder;
 }
+#description{
+    font-size: small;
+
+}
 #left_div{
     height: auto;
     width: 20%;
@@ -128,4 +132,331 @@ text-decoration-color: rgb(255, 149, 0);
     background-color: rgb(255, 162, 0);
     font-weight: bolder;
     border-radius: 3px;
+}
+
+/*header styling*/
+.first{
+    width:100%;
+    height:90px;
+    background-color: #131a22;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.first img{
+    width: 130px;
+    height: 80px;
+    overflow: hidden;
+    margin:0 10px;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+.first{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+}
+.flex span,i{
+    color:white;
+}
+.logo{
+    flex:0.18;
+    margin-right:10px;
+    justify-content: space-between;
+}
+.map{
+    border: 10x solid transparent;
+    border-radius: 3px;
+}
+.map i{
+    margin-top: 17px;
+    padding-left: 5px;
+    font-size: 17px;
+}
+.map div{
+    padding: 5px;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+}
+.map div span:first-child{
+    font-weight: 400;
+    font-size: 13px;
+}
+.map div span{
+  font-weight: bold;  
+}
+.right{
+    justify-content: space-between;
+    flex:0.29;
+    margin-right: 10px;
+    align-items: center;
+}
+.input{
+    width: 100%;
+    background-color: white;
+    flex:0.53;
+    border-radius: 5px;
+    display: flex;
+    margin:0 10px;
+    align-items:center;
+    overflow: hidden;
+    justify-content: space-between;
+}
+.input input{
+    outline: none;
+    width:80%;
+    font-size: 16px;
+    padding: 10px 2px;
+    border:none;
+}
+.input .fa-search{
+    color: rgb(51,51,51);
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #febd69;
+    border-radius: 0 5px 5px 0;
+}
+.input div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 1px solid gray;
+    background-color: rgb(236,234,234);
+    padding: 6px 0;
+}
+.input div span{
+    border-radius:5px 0 0 5px;
+    color:rgb(51,51,51);
+    padding: 6px 5px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.input .fa-caret-down{
+    color:rgb(51,51,51);
+    cursor: pointer;
+    padding: 5px;
+}
+.lang i{
+    padding: 0;
+    margin: 0;
+    color:gray;
+
+}
+.lang{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    border:1px solid transparent;
+    border-radius: 3px;
+
+}
+.right img{
+    width:30px;
+    height:30px;
+    padding: 4px;
+    margin:0;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.sign{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 6px;
+    cursor:pointer;
+    border:1px solid transparent;
+    border-radius: 3px;
+}
+.sign span:first-child{
+    font-weight: 400;
+    font-size: 13px;
+}
+.sign span{
+    display:flex;
+    width:100%;
+    font-weight: bold;
+}
+.flex .ac span{
+font-size:15px;
+margin-right:5px;
+font-weight: bold;
+}
+.fa-shopping-cart{
+    font-size: 30px;
+}
+.ca{
+    font-size:14px;
+    font-weight: bold;
+}
+.cart{
+    align-items:flex-end;
+    position: relative;
+    padding: 5px 10px;
+    cursor:pointer;
+    border:1px solid transparent;
+    border-radius: 3px;
+}
+.cart p{
+position: absolute;
+font-weight: bolder;
+color:#131a22;
+top:7px;
+left:23px;
+}
+.second{
+    width:100%;
+    height:5%;
+    background-color: #232f3e;
+    display:flex;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    justify-content:space-evenly;
+    
+}
+
+.second ul{
+align-items: center;
+list-style: none;
+display: flex;
+justify-content:space-evenly;
+align-items: center;
+}
+.second span{
+    font-size:15px;
+}
+.second a{
+    color:white;
+    text-decoration:none;
+}
+.second-1 div i{
+    font-size: 20px;
+    cursor: pointer;
+    border:1px solid transparent;
+    border-radius: 3px;
+}
+.second li{
+    padding: 5px 10px;
+    font-size: 15px;
+    margin: 7px 0;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 3px;
+
+}
+.second-1{
+    flex:0.66;
+    display: flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+}
+.second-1 div{
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+.second-2{
+    display: flex;
+    flex:0.74;
+    justify-content: flex-start;
+    align-items:flex-start;
+}
+.second-3{
+    flex:0.2;
+    display: flex;
+    justify-content:flex-end;
+    margin-right: 20px;
+    overflow: hidden;
+}
+.second-3 span{
+    padding: 5px 10px;
+    cursor: pointer;
+    border:1px solid transparent;
+    border-radius: 3px;
+}
+.second-1 div span{
+    padding: 5px;
+    cursor: pointer;
+}
+.second-1 div:hover{
+    border:1px solid white;
+}
+.second-2 li:hover{
+    border:1px solid white;
+}
+.second-3:hover{
+    border:1px solid white;
+}
+.logo a:hover{
+    border:1px solid white;
+}
+.map:hover{
+    border:1px solid white;
+}
+.lang:hover{
+    border:1px solid white;
+    cursor: pointer;
+}
+.sign:hover{
+    border:1px solid white;
+}
+.cart:hover{
+    border:1px solid white;
+}
+/*footer styling*/
+
+.footer{
+    width:100%;
+    height:490px;
+    transition: all 0.2s;
+}
+.backtop{
+    text-align:center;
+    height:50px;
+    background-color: #37475a;
+    padding: 16px;
+    color:white;
+    font-weight:bold;
+}
+.backtop:hover{
+    background-color: #4d627c;
+}
+.detail{
+    background-color: #232f3e;
+    height:350px;
+}
+.table{
+    margin:0 150px;
+    height:100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+.table div{
+    width:230px;
+}
+.t-head{
+    font-size: 16px;
+    color:white;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.table li{
+color:rgb(223,221,221);
+padding-top: 10px;
+font-weight: lighter;
+font-size:14px;
+list-style: none;
+}
+.line{
+    height:0.5px;
+    width:100%;
+    background-color: rgb(172,172,172);
 }
