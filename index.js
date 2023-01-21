@@ -15,6 +15,14 @@ const swiper = new Swiper('.swiper', {
     
 });
 
+let total = document.getElementById("cartitems")
+
+let cartdata = JSON.parse(localStorage.getItem("cart"))||[]
+
+window.addEventListener("load",()=>{
+    total.innerText = cartdata.length
+})
+
 
 let leftbtn=document.querySelector(".l-btn");
 let rightbtn=document.querySelector(".r-btn");

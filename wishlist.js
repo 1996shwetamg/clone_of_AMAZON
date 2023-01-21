@@ -1,5 +1,6 @@
 let cont=document.getElementById("wishlist-container");
-let data=JSON.parse(localStorage.getItem("wishlist"))||[];
+let data=JSON.parse(localStorage.getItem("favourite"))||[];
+console.log(data)
 show(data)
 
   function show(data){
@@ -11,7 +12,7 @@ show(data)
  let card=document.createElement("div");
 
   let image=document.createElement("img");
-  image.setAttribute("src",element.image); 
+  image.setAttribute("src",element.avatar); 
 
   let brand=document.createElement("h2");
   brand.innerText=element.title;
