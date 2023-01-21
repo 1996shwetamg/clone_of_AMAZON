@@ -1,6 +1,7 @@
 window.addEventListener("load",()=>{
     display()
 })
+
 let shoes=document.getElementById("shoes")
 let acc=document.getElementById("acc")
 let mans=document.getElementById("mans")
@@ -32,12 +33,13 @@ function fetchdata(img,title,des,price,cate){
         <p id="description">${des}</p>
         <h3 class="color">Rs.${price}</h3>
         <div>
-        <button class="hover">Buy</button>
+        <button class="hover" id="cart">Add to Cart</button>
         </div>
     </div>
     `
     return obj
 }
+
 shoes.addEventListener("click",shoesfun)
 function shoesfun(){
    // document.getElementById("product_div").innerHTML="";
