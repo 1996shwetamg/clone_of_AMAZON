@@ -18,6 +18,7 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
+    position:sticky;
 }
 .first img{
     width: 130px;
