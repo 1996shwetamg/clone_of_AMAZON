@@ -4,6 +4,7 @@
     text-decoration: none;
     box-sizing: border-box;
     list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body{
@@ -699,3 +700,7 @@ display: block;
     overflow: hidden;
     height:100%;
 }
+
+
+
+
