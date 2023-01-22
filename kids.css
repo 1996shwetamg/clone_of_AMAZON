@@ -19,15 +19,15 @@ body{
 .first{
     margin:0;
     padding: 0;
-    width:100%;
-    height:70px;
+    width: 88px;
+    height:100%;
     background-color: #131a22;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 .first img{
-    width: 130px;
+    width: 1100%;
     margin:0 10px;
     padding: 5px 10px;
     border: 1px solid transparent;
@@ -49,6 +49,7 @@ body{
     flex:0.18;
     margin-right:10px;
     justify-content: space-between;
+    width: 3000px;
 }
 .map{
     border: 10x solid transparent;
