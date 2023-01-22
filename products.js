@@ -1,6 +1,7 @@
 window.addEventListener("load",()=>{
     display()
 })
+
 let shoes=document.getElementById("shoes")
 let acc=document.getElementById("acc")
 let mans=document.getElementById("mans")
@@ -9,35 +10,66 @@ let kids=document.getElementById("kids")
 let allcloths=document.getElementById("allcloths")
 let l_to_high=document.getElementById("l_to_high")
 let thousands=document.getElementById("thousands")
-function display(){
-    fetch("https://6398b72e29930e2bb3bff0a7.mockapi.io/ClothesProd")
+
+let Data = []
+let cartdata = JSON.parse(localStorage.getItem("cart"))||[]
+
+ async function display(){
+    await fetch("https://6398b72e29930e2bb3bff0a7.mockapi.io/ClothesProd")
     .then((res)=>{
         return res.json()
     }).then((data)=>{
-        //console.log(data)
+        console.log(data)
+        Data = data
+        console.log(Data)
         let arr=[]
         for(let item of data){
-            let ans=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+            let ans=fetchdata(item.Avtar,item.Title,item.Discription.substring(0,75),item.Price,item.Category,item.id)
         arr.push(ans)
         }
         document.getElementById("product_div").innerHTML=arr.join(" ")
     })
+
+    let btn = document.querySelectorAll(".hover")
+    for(let key of btn){
+        key.addEventListener("click",(e)=>{
+            let current = e.target.dataset.id
+            for(let key of Data){
+                if(key.id === current ){
+                    let obj = {
+                        category:key.Category,
+                        description : key.Discription,
+                        id : key.id,
+                        image : key.Avtar,
+                        price : key.Price,
+                        quantity : 1,
+                        title : key.Title
+                    }
+                    cartdata.push(obj)
+                    console.log(obj)
+                    localStorage.setItem("cart",JSON.stringify(cartdata))
+                }
+            }
+        })
+    }
 }
 
-function fetchdata(img,title,des,price,cate){
+function fetchdata(img,title,des,price,cate,id){
     let obj=`
     <div class="divnew">
         <img width="90%"  src=${img} alt="">
         <h3 class="color">${title}</h3>
-        <p>${des}</p>
+        <p id="description">${des}</p>
         <h3 class="color">Rs.${price}</h3>
         <div>
-        <button class="hover">Buy</button>
+        <button class="hover" data-id=${id}>Add to Cart</button>
         </div>
     </div>
     `
     return obj
 }
+
+
 shoes.addEventListener("click",shoesfun)
 function shoesfun(){
    // document.getElementById("product_div").innerHTML="";
@@ -48,7 +80,7 @@ function shoesfun(){
         //console.log(data)
         let arr2=[]
         data.forEach(item => {
-            let newans=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+            let newans=fetchdata(item.Avtar,item.Title,item.Discription.substring(0,75),item.Price,item.Category)
             arr2.push(newans)
         });
         document.getElementById("product_div").innerHTML=arr2.join(" ")
@@ -65,7 +97,7 @@ function accfun(){
         //console.log(data)
         let arr3=[]
         data.forEach(item => {
-            let newans1=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+            let newans1=fetchdata(item.Avtar,item.Title,item.Discription.substring(0,75),item.Price,item.Category)
             arr3.push(newans1)
         });
         document.getElementById("product_div").innerHTML=arr3.join(" ")
@@ -89,7 +121,7 @@ function mansfun(){
         console.log(ans4)
         let finalres=[]
         ans4.forEach(item => {
-            let newans6=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+            let newans6=fetchdata(item.Avtar,item.Title,item.Discription.substring(0,75),item.Price,item.Category)
             finalres.push(newans6)
         });
     document.getElementById("product_div").innerHTML=finalres.join(" ")
@@ -113,7 +145,7 @@ function womansfun(){
         console.log(ans4)
         let finalres=[]
         ans4.forEach(item => {
-            let newans6=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+            let newans6=fetchdata(item.Avtar,item.Title,item.Discription.substring(0,75),item.Price,item.Category)
             finalres.push(newans6)
         });
     document.getElementById("product_div").innerHTML=finalres.join(" ")
@@ -137,7 +169,7 @@ function kidssfun(){
         console.log(ans4)
         let finalres=[]
         ans4.forEach(item => {
-            let newans6=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+            let newans6=fetchdata(item.Avtar,item.Title,item.Discription.substring(0,75),item.Price,item.Category)
             finalres.push(newans6)
         });
     document.getElementById("product_div").innerHTML=finalres.join(" ")
@@ -173,7 +205,7 @@ function assending(){
         //console.log(ans3)
         let arr=[]
         for(let item of ans3){
-            let ans=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+            let ans=fetchdata(item.Avtar,item.Title,item.Discription.substring(0,75),item.Price,item.Category)
         arr.push(ans)
         }
         document.getElementById("product_div").innerHTML=arr.join(" ")
@@ -193,7 +225,7 @@ function desending(){
         //console.log(ans3)
         let arr=[]
         for(let item of ans3){
-            let ans=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+            let ans=fetchdata(item.Avtar,item.Title,item.Discription.substring(0,75),item.Price,item.Category)
         arr.push(ans)
         }
         document.getElementById("product_div").innerHTML=arr.join(" ")
@@ -213,7 +245,7 @@ function under1000(){
         console.log(ans)
         let finalres=[]
         ans.forEach(item => {
-            let newans6=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+            let newans6=fetchdata(item.Avtar,item.Title,item.Discription.substring(0,75),item.Price,item.Category)
             finalres.push(newans6)
         });
     document.getElementById("product_div").innerHTML=finalres.join(" ")
@@ -238,7 +270,7 @@ function thousandstofive2(){
        // console.log(ans)
         let finalres=[]
         sortdata.forEach(item => {
-            let newans6=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+            let newans6=fetchdata(item.Avtar,item.Title,item.Discription.substring(0,75),item.Price,item.Category)
             finalres.push(newans6)
         });
     document.getElementById("product_div").innerHTML=finalres.join(" ")
@@ -262,7 +294,7 @@ function fivetoten2(){
        // console.log(ans)
         let finalres=[]
         sortdata.forEach(item => {
-            let newans6=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+            let newans6=fetchdata(item.Avtar,item.Title,item.Discription.substring(0,75),item.Price,item.Category)
             finalres.push(newans6)
         });
     document.getElementById("product_div").innerHTML=finalres.join(" ")
@@ -286,7 +318,7 @@ function tentotwenty2(){
        // console.log(ans)
         let finalres=[]
         sortdata.forEach(item => {
-            let newans6=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+            let newans6=fetchdata(item.Avtar,item.Title,item.Discription.substring(0,75),item.Price,item.Category)
             finalres.push(newans6)
         });
     document.getElementById("product_div").innerHTML=finalres.join(" ")
@@ -310,7 +342,7 @@ function abovetwenty2(){
        // console.log(ans)
         let finalres=[]
         sortdata.forEach(item => {
-            let newans6=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+            let newans6=fetchdata(item.Avtar,item.Title,item.Discription.substring(0,75),item.Price,item.Category)
             finalres.push(newans6)
         });
     document.getElementById("product_div").innerHTML=finalres.join(" ")
@@ -336,9 +368,19 @@ function watchfun1(){
        // console.log(ans)
         let finalres=[]
         sortdata.forEach(item => {
-            let newans6=fetchdata(item.Avtar,item.Title,item.Discription,item.Price,item.Category)
+            let newans6=fetchdata(item.Avtar,item.Title,item.Discription.substring(0,75),item.Price,item.Category)
             finalres.push(newans6)
         });
     document.getElementById("product_div").innerHTML=finalres.join(" ")
     })
 }
+
+//backtop
+
+let backtop=document.querySelector(".backtop");
+backtop.addEventListener("click",()=>{
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+})

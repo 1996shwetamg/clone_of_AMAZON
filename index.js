@@ -15,6 +15,14 @@ const swiper = new Swiper('.swiper', {
     
 });
 
+let total = document.getElementById("cartitems")
+
+let cartdata = JSON.parse(localStorage.getItem("cart"))||[]
+
+window.addEventListener("load",()=>{
+    total.innerText = cartdata.length
+})
+
 
 let leftbtn=document.querySelector(".l-btn");
 let rightbtn=document.querySelector(".r-btn");
@@ -86,6 +94,7 @@ sidebtn.addEventListener("click",()=>{
 sidebar.classList.add("active");
 xmark.classList.add("active");
 black.classList.add("active");
+document.body.classList.add("stop-scroll");
 })
 
 xmark.addEventListener("click",()=>{
@@ -93,3 +102,16 @@ xmark.addEventListener("click",()=>{
     xmark.classList.remove("active");
     black.classList.remove("active");
     })
+
+    //sign in&lists
+
+  let sign=document.querySelector(".ac");
+  let triangle=document.querySelector(".triangle");
+  let signin=document.querySelector(".hidden-sign");
+
+  sign.addEventListener("click",()=>{
+    console.log("ok")
+    black.classList.toggle("active-1");
+    signin.classList.toggle("active");
+    triangle.classList.toggle("active");
+  })
