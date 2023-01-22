@@ -32,6 +32,7 @@ function shopping(data){
         heart.setAttribute('id','heart');
         heart.innerText = '❤';
         heart.addEventListener('click',()=>{
+            alert("ADDED TO WISHLIST")
             let favourite = JSON.parse(localStorage.getItem('favourite'))||[];
             favourite.push(element);
             localStorage.setItem('favourite',JSON.stringify(favourite));
@@ -44,8 +45,9 @@ function shopping(data){
         cart.setAttribute('id','cart');
         cart.innerText = '🛒';
         cart.addEventListener('click',()=>{
+            alert("ADDED TO CART")
             let cart = JSON.parse(localStorage.getItem('cart'))||[];
-            cart.push(element);
+            cart.push({...element,image:element.avatar,quantity:1});
             localStorage.setItem('cart',JSON.stringify(cart));
         })
 

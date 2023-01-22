@@ -9,19 +9,155 @@
     <title>Shopping</title>
     <link rel = "icon" href = "https://live.staticflickr.com/65535/52563473413_acddb191f5_w.jpg" 
         type = "image/x-icon">
-    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="kids.css">
 </head>
 <body>
-    <header id="header">
+    <div class="sidebar">
+        <div class="hidden-head">
+            <h2>Hello,Sign in</h2>
+        </div>
+        <div class="hidden-content">
+            <h3>Trending</h3>
+            <ul>
+                <div>
+                    <li>Best Sellers</li>
+                </div>
+                <div>
+                    <li>New Releases</li>
+                </div>
+                <div>
+                    <li>Movers and Shakers</li>
+                </div>
+                
+            </ul>
+        </div>
+        <hr class="line">
+        <div class="hidden-content">
+            <h3>Digital Content & Devices</h3>
+            <ul>
+                <div>
+                    <li>Echo & Alexa</li><i class="fa fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>Fire TV</li><i class="fa fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>Kindle E-Readers & eBooks</li><i class="fa fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>Audible Audiobooks</li><i class="fa fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>Amazon Prime Video</li><i class="fa fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>Amazon Prime Music</li><i class="fa fa-angle-right"></i>
+                </div>
+            </ul>
+        </div>
+        <hr class="line">
+        <div class="hidden-content">
+            <h3>Shop By Category</h3>
+            <ul>
+                <div>
+                    <li>Mobile, Computers</li><i class="fa fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>TV,Appliances,Electronics</li><i class="fa fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>Men's Fashion</li><i class="fa fa-angle-right"></i>
+                </div>
+                <div>
+                    <a href="women.html"> <li>Women's Fashion</li></a><i class="fa fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>See All</li><i class="fa fa-angle-bottom"></i>
+                </div>
+            </ul>
+        </div>
+        <hr class="line">
+        <div class="hidden-content">
+            <h3>Programs & Features</h3>
+            <ul>
+                <div>
+                    <li>Gift Cards & Mobile Recharges</li><i class="fa fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>Flight Tickets</li><i class="fa fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>#FounditOnAmazon</li><i class="fa fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>Clearance store</li><i class="fa fa-angle-right"></i>
+                </div>
+            </ul>
+        </div>
+        <hr class="line">
+        <div class="hidden-content">
+            <h3>Help & Settings</h3>
+            <ul>
+                <div>
+                    <li>Your Account</li><i class="fa fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>Customer Service</li><i class="fa fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>#FounditOnAmazon</li><i class="fa fa-angle-right"></i>
+                </div>
+                <div>
+                    <li>Clearance store</li><i class="fa fa-angle-right"></i>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <i class="fa-solid fa-xmark"></i>
+    <div class="triangle"></div>
+    <div class="hidden-sign">
+        <div class="hidden-table">
+            <div>
+                <h3>Your Lists</h3>
+                <ul>
+                    <li>Create a Wishlist</li>
+                    <li>Wish from any website</li>
+                    <li>Baby Wishlist</li>
+                    <li>Discover Your Style</li>
+                    <li>Explore Showroom</li>
+                </ul>
+            </div>
+
+            <div class="hidden-line"></div>
+            <div>
+                <h3>Your Account</h3>
+                <ul>
+                    <li>Your Account</li>
+                    <li>Your Orders</li>
+                    <li>Your Wishlist</li>
+                    <li>Your Recommendations</li>
+                    <li>Your Prime Membership</li>
+                    <li>Your prime video</li>
+                    <li>Your subscribe and save items</li>
+                    <li>Memberships and subscriptions</li>
+                    <li>Your amzon business account</li>
+                    <li>Your seller account</li>
+                    <li>Manage your content and devices</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="black"></div>
+   
+    <header>
         <div class="first">
             <div class="flex logo">
-                <div class="mainlog"><a  href="#"><img src="logo\WhatsApp Image 2023-01-18 at 11.09.21 PM.jpeg    " alt=""></a></div>
-            
+            <a href="index.html"><img src="logo\WhatsApp Image 2023-01-18 at 11.09.21 PM.jpeg" alt=""></a>
             <div class="map flex">
                 <i class="fas fa-map-marker"></i>
             <div>
             <span>Deliver to</span>
-            <span>India</span>
+            <span>Select your address</span>
         </div>
         </div>
         </div>
@@ -39,20 +175,20 @@
                 <i class="fas fa-caret-down"></i>
             </div>
             <div class="sign">
-                <span>Hello, Sign in</span>
+                <a href="signup.html"><span>Hello, Sign in</span></a>
                 <div class="flex ac">
-                    <span>Account $ Lists</span>
+                    <span>Account & Lists</span>
                     <i class="fas fa-caret-down"></i>
                 </div>
             </div>
             <div class="sign">
-                <span>Returns</span>
-                <span>& Orders</span>
+                
+               <a href="wishlist.html"> <span style="font-size: 18px;">Wish List</span></a>
             </div>
             <div class="flex cart">
-                <i class="fas fa-shopping-cart"></i>
-            <span class="ca">Cart</span>
-            <p>0</p>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            <a href="cart.html"><span class="ca">Cart</span></a>
+            <p id="cartitems">0</p>
             </div>
         </div>
     </div>
@@ -70,10 +206,10 @@
                 <li>Best Sellers</li>
                 <li>Mobiles</li>
                 <li>Today's Deals</li>
-                <li>Customer Service</li>
-                <li>Electronics</li>
-                <li>Prime</li>
-                <li>Fashion</li>
+                <a href="Women.html"><li>Women's</li></a>
+                <a href="Mens.html"><li>Men's</li></a>
+                <a href="kids.html"><li>Kid's</li></a>
+                <a href="products.html"><li>Fashion</li></a>
                 <li>Amazon Pay</li>
             </ul>
         </div>
@@ -82,7 +218,6 @@
         </div>
     </div>
     </header>
-
    
 
 
@@ -287,5 +422,5 @@
 
     
 </body>
-<script src="page.js"></script>
+<script src="kids.js"></script>
 </html>

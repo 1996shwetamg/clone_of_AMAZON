@@ -2,6 +2,7 @@ let cont=document.getElementById("cart-container");
 let total=document.getElementById("cart-total")
 let data=JSON.parse(localStorage.getItem("cart"))||[];
 show(data)
+console.log(data)
 
   function show(data){
   cont.innerHTML=null;
