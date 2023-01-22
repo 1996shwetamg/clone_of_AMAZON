@@ -384,3 +384,13 @@ backtop.addEventListener("click",()=>{
         behavior:"smooth"
     });
 })
+
+//cart
+
+let total = document.getElementById("cartitems")
+
+let cartdata1 = JSON.parse(localStorage.getItem("cart"))||[]
+
+window.addEventListener("load",()=>{
+    total.innerText = cartdata1.length
+})
