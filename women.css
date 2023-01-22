@@ -10,7 +10,7 @@
     width: 80%; 
     margin: 5px;
     /* border: 2px solid red; */
-    height: 9000px;
+    /* height: 9000px; */
     
 }
 #left{
@@ -161,4 +161,12 @@
      list-style: none;
      list-style-type: none;
      list-style-position: initial;
+}
+#left label:hover, p:hover,li:hover{
+    color: rgb(215, 75, 75);
+    cursor: pointer;
+}
+
+#left div>div:hover{
+    color: aqua;
 }
